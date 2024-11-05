@@ -1,3 +1,3 @@
-from levenshtein.src.main import main, get_sha256
+from levenshtein.main import main, levenshtein
 
 __version__ = "0.1.0"

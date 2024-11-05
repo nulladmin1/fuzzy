@@ -5,6 +5,11 @@ description = ""
 authors = ["nulladmin1 <shrey.deogade@protonmail.com>"]
 readme = "README.md"
 
+packages = [
+    { include = "levenshtein" },
+]
+
+
 [tool.poetry.dependencies]
 python = "^3.12"
 

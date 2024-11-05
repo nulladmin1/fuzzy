@@ -1,5 +1,5 @@
 {
-  description = "Nix Flake Template for Python using Poetry";
+  description = "Fuzzy";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -28,11 +28,12 @@
 
     apps = forEachSystem (system: let
       inherit (poetry2nix.lib.mkPoetry2Nix {pkgs = pkgs.${system};}) mkPoetryApplication;
-      app = mkPoetryApplication {projectDir = ./.;};
+      fuzzy = mkPoetryApplication {projectDir = ./.;};
     in {
-      default = {
+      default = self.apps.levenshtein-matrix;
+      levenshtein_matrix = {
         type = "app";
-        program = "${app}/bin/app";
+        program = "${fuzzy}/bin/levenshtein_matrix";
       };
     });
   };

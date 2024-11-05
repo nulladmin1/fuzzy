@@ -6,7 +6,7 @@ authors = ["nulladmin1 <shrey.deogade@protonmail.com>"]
 readme = "README.md"
 
 packages = [
-    { include = "levenshtein" },
+    { include = "levenshtein_matrix" },
 ]
 
 
@@ -22,4 +22,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-levenshtein = "levenshtein:main"
+levenshtein_matrix = "levenshtein_matrix:main"
